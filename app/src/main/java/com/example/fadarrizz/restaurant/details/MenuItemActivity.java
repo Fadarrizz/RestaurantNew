@@ -38,9 +38,7 @@ public class MenuItemActivity extends AppCompatActivity {
         url = extras.getString("url");
         desc = extras.getString("desc");
         price = extras.getString("price");
-//        ArrayList menuItem = extras.getParcelableArrayList("menuItem");
-
-
+        
         textView_name = findViewById(R.id.textView_detail_name);
         imageView = findViewById(R.id.imageView_detail_url);
         textView_desc = findViewById(R.id.textView_detail_desc);

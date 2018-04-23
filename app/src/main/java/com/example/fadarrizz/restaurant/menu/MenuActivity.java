@@ -70,8 +70,6 @@ public class MenuActivity extends AppCompatActivity implements MenuItemsRequest.
                 extras.putString("desc", desc);
                 extras.putString("price", price);
 
-//                extras.putString("item", String.valueOf(parent.getItemAtPosition(position)));
-//                extras.putParcelableArrayList("menuItem", (ArrayList<? extends Parcelable>) menuItem);
                 intent.putExtras(extras);
 
                 startActivity(intent);
