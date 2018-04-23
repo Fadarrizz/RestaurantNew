@@ -4,15 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fadarrizz.restaurant.R;
-import com.example.fadarrizz.restaurant.menu.MenuItem;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 
 public class MenuItemActivity extends AppCompatActivity {
 
@@ -38,7 +34,7 @@ public class MenuItemActivity extends AppCompatActivity {
         url = extras.getString("url");
         desc = extras.getString("desc");
         price = extras.getString("price");
-        
+
         textView_name = findViewById(R.id.textView_detail_name);
         imageView = findViewById(R.id.imageView_detail_url);
         textView_desc = findViewById(R.id.textView_detail_desc);

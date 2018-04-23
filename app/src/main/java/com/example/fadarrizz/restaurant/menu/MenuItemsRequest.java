@@ -26,7 +26,6 @@ public class MenuItemsRequest implements Response.Listener<JSONObject>, Response
         void gotMenuItemsError(String message);
     }
 
-    // Properties of the class
     private Context context;
     private Callback activity;
     private String category;
@@ -35,24 +34,20 @@ public class MenuItemsRequest implements Response.Listener<JSONObject>, Response
 
     ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
 
-    // Constructor of the class
     public MenuItemsRequest(Context context) {
         this.context = context;
     }
 
-    // Methods of the class
     public void getMenuItems(Callback activity, String category) {
         this.activity = activity;
         this.category = category;
 
-        // Instantiate the RequestQueue
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "https://resto.mprog.nl/menu";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET, url, null, this, this);
 
-        // Add the request to the RequestQueue
         queue.add(jsonObjectRequest);
     }
 
@@ -77,7 +72,6 @@ public class MenuItemsRequest implements Response.Listener<JSONObject>, Response
                     menuList.add(menuItem);
                 }
             }
-//            menuList = MenuItem.fromJson(menuItems, category);
             activity.gotMenuItems(menuList);
         } catch (JSONException e) {
             e.printStackTrace();

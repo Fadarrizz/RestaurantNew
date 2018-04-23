@@ -39,9 +39,9 @@ public class CustomListViewAdapter extends ArrayAdapter<MenuItem> {
 
             MenuItem menuItem = getItem(position);
 
-            ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView_url);
-            TextView textView_name = (TextView) convertView.findViewById(R.id.textView_name);
-            TextView textView_price = (TextView) convertView.findViewById(R.id.textView_price);
+            ImageView imageView = convertView.findViewById(R.id.imageView_url);
+            TextView textView_name = convertView.findViewById(R.id.textView_name);
+            TextView textView_price = convertView.findViewById(R.id.textView_price);
 
             textView_name.setText(menuItem.getName());
             textView_price.setText(menuItem.getPrice());

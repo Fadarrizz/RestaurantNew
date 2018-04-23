@@ -1,26 +1,16 @@
 package com.example.fadarrizz.restaurant.menu;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fadarrizz.restaurant.R;
-import com.example.fadarrizz.restaurant.categories.CategoriesActivity;
-import com.example.fadarrizz.restaurant.categories.CategoriesRequest;
 import com.example.fadarrizz.restaurant.details.MenuItemActivity;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity implements MenuItemsRequest.Callback {
@@ -28,9 +18,7 @@ public class MenuActivity extends AppCompatActivity implements MenuItemsRequest.
     private ListView listView;
     public String category;
     ArrayList<MenuItem> menuItem;
-
-    MenuItem item = new MenuItem();
-
+    MenuItem item;
     MenuItemsRequest menuItemsRequest;
 
     @Override

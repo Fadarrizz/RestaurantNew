@@ -1,13 +1,6 @@
 package com.example.fadarrizz.restaurant.menu;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-
-public class MenuItem implements Serializable{
+public class MenuItem {
 
     private String name;
     private String description;
